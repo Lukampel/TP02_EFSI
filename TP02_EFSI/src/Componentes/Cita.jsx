@@ -1,19 +1,19 @@
-import "./Cita.css"
+import DetalleCita from "./DetalleCita";
+import Boton from "./Boton";
+import "./Cita.css";
 
 function Cita({ mascota, dueno, fecha, hora, sintomas }) {
   return (
     <div className="cita">
-      <p>Mascota: <span>{mascota}</span></p>
-      <p>Dueño: <span>{dueno}</span></p>
-      <p>Fecha: <span>{fecha}</span></p>
-      <p>Hora: <span>{hora}</span></p>
-      <p>Sintomas: <span>{sintomas}</span></p>
+      <DetalleCita etiqueta="Mascota" valor={mascota} />
+      <DetalleCita etiqueta="Dueño" valor={dueno} />
+      <DetalleCita etiqueta="Fecha" valor={fecha} />
+      <DetalleCita etiqueta="Hora" valor={hora} />
+      <DetalleCita etiqueta="Sintomas" valor={sintomas} />
 
-      <button className="button eliminar u-full-width">
-        Eliminar ×
-      </button>
+      <Boton texto="Eliminar ×" clase="button eliminar u-full-width" />
     </div>
-  )
+  );
 }
 
-export default Cita
+export default Cita;

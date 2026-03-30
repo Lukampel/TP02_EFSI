@@ -1,6 +1,6 @@
-import Header from "./Componentes/Header"
-import Formulario from "./Componentes/Formulario"
-import ListaCita from "./Componentes/ListaCita"
+import Header from "./Componentes/Header";
+import Formulario from "./Componentes/Formulario";
+import ListaCita from "./Componentes/ListaCita";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

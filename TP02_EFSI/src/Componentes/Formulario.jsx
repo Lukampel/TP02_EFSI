@@ -1,32 +1,24 @@
-import "./Formulario.css"
+import Input from "./Input";
+import Boton from "./Boton";
+import Titulo from "./Titulo.jsx";
+import "./Formulario.css";
 
 function Formulario() {
   return (
     <div className="one-half column">
-      <h2>Crear mi Cita</h2>
+      <Titulo texto="Crear mi Cita" tipo="h2" />
 
       <form>
-        <label>Nombre Mascota</label>
-        <input type="text" className="u-full-width" />
+        <Input label="Nombre Mascota" name="mascota" />
+        <Input label="Nombre Dueño" name="dueno" />
+        <Input label="Fecha" tipo="date" name="fecha" />
+        <Input label="Hora" tipo="time" name="hora" />
+        <Input label="Sintomas" tipo="textarea" name="sintomas" />
 
-        <label>Nombre Dueño</label>
-        <input type="text" className="u-full-width" />
-
-        <label>Fecha</label>
-        <input type="date" className="u-full-width" />
-
-        <label>Hora</label>
-        <input type="time" className="u-full-width" />
-
-        <label>Sintomas</label>
-        <textarea className="u-full-width"></textarea>
-
-        <button type="submit" className="u-full-width button-primary">
-          Agregar Cita
-        </button>
+        <Boton texto="Agregar Cita" tipo="submit" clase="u-full-width button-primary" />
       </form>
     </div>
-  )
+  );
 }
 
-export default Formulario
+export default Formulario;
